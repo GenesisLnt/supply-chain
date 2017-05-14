@@ -1,0 +1,338 @@
+<template name="supplier">
+<body>
+  <div class="loader"></div>
+    <div class="wrapper">
+    	
+        <div class="body-content">
+            <div class="grid-layout" style="margin: 0">
+                <div class="left-navbar">
+                    <div class="logo">
+                        <a href="#"><img src="dummy-logo-white.png" alt="logo"></a>
+                    </div>
+                    <div class="profile-box">
+                <div class="dis-table">
+                    <div class="dis-tablecell profile-image">
+                        <div class="profile-pic"><a href="#"><img src="color-dummy-profile.png"></a></div>
+                    </div>
+                    <div class="dis-tablecell profile-txt">
+                        <span>Welcome Mr,</span>
+                        <a href="#">John Doie</a>
+                    </div>
+                </div>
+            </div>
+            <div class="account-infos">
+                <div class="account-infos">
+                    <ul>
+                        <li>
+                        <span>Name:</span>
+                        <a>John Doie</a>
+                        </li>
+                        <li>
+                        <span>Role:</span>
+                        <a>Supplier</a>
+                        </li>
+                        <li>
+                        <span id='balance'>Balance (Ethers):</span>
+                        <a>1000</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                </div>
+                <div class="grid-10 right-contents">
+                    <div class="header">
+                <div class="top-navigation">
+                    
+                    <div class="nav-bar-top">
+                        <ul>
+                            <li class="profile-drop-down">
+                                <a href="#">
+                                    <img src="default-avatar.svg">
+                                    John Doie
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Setting</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li class="noti-info-number">
+                                <a href="#" aria-expanded="false">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="badge bg-green">6</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div> 
+        </div>
+                    <div class="right-part-content">
+                        <div class="page-heading">
+                            <h2>Supplier</h2>
+                        </div>
+                        <div class="tabination-box">
+                         <div class="tabCnt">
+                            <div class="tabNav">
+                               <ul>
+                                  <li class="activeli"><a href="javascript:void(0)" rel="create-tab"><span><i class="fa-create"></i></span>Create</a></li>
+                                  <li><a href="javascript:void(0)" rel="filter-tab"><span><i class="fa-filter"></i></span>Filter</a></li>
+                                  <li><a href="javascript:void(0)" rel="notification-tab" class="active"><span><i class="fa-notification"></i></span>Notification</a></li>
+                               </ul>
+                               <div class="clear"></div>
+                            </div>
+                            <div class="tabResult">
+                               <div class="tabBx overview" id="create-tab" style="display:block">
+                                 <div class="content">
+                                     <div class="create-tab-content">
+                                         <div class="grid-layout form-layout padding-t-25">
+                            <div class="form-row">
+                                <div class="grid-4">
+                                     <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Shipment ID</label>
+                                            <input type="text" name="" id="shipmentId">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-4">
+                                    <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Purchase Order No.</label>
+                                            <input type="text" name="" id="orderNo">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-4">
+                                    <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Threshold Temperature</label>
+                                            <input type="text" name="" id="temparature">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="grid-4">
+                                     <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Content Discription</label>
+                                            <input type="text" name="" id="description">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-4">
+                                    <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Wholeseller</label>
+                                            <input type="text" name="" id="wholeseller">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-4">
+                                    <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Freight Company</label>
+                                            <div class="input-type-select">
+                                                <select id="freight"><option>Company 1</option><option>Company 2</option></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="grid-4">
+                                     <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Content Value</label>
+                                            <input type="text" name="" id="amount">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-4">
+                                     <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Insurance Document</label>
+                                            <div class="input-type-file">
+                                                <input type="file" class="filepath" id="file-type-insurance" name="">
+                                                <span for="file-type-insurance"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-4">
+                                     <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Freight Document</label>
+                                            <div class="input-type-file">
+                                                <input type="file" class="filepath" id="file-type-doc" name="">
+                                                <span for="file-type-insurance"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="grid-4">
+                                     <div class="form-field animate-label">
+                                        <div class="input-group">
+                                            <label class="label-anim">Date</label>
+                                            <input type="text" value='14/05/2017' name="" id="date-picker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-field padding0">
+                                    <div class="input-group">
+                                        <div class="submit-btn">
+                                            <input type="submit" name="" value="Sign" id="supplier-create">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-shipment">
+                            <div class="line-with-dots">
+                                <div class="dots">
+                                    <div class="round"></div>
+                                    <span>Supplier</span>
+                                </div>
+                                <div class="dots right-dot">
+                                    <div class="round"></div>
+                                    <span>Wholeseller</span>
+                                </div>
+                                <div class="moving-truck">
+                                    <div class="floating-temp">
+                                        <div class="temp-type green-temp">20 c</div>
+                                    </div>
+                                    <div class="mov-truck-img">
+                                        <img src="truck-green.png" alt="" width="100" height="60">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showing-running animated">
+                                <div class="dis-table">
+                                    <div class="dis-tablecell">
+                                        <div class="animated outImage"><img src="truck-loader-running.gif" ></div>
+                                        <h2>Deploying Contract and Shipment Started !!!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                     </div>
+                                 </div>
+                               </div>
+                               <div class="tabBx overview" id="filter-tab">
+                                  <div class="content">
+                                      <div class="filter-tab-content padding-t-25">
+                                         <div class="select-contact">
+                                            <h3>Select Wholeseller</h3>
+                                            <div class="contact-dropdown">
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript:void(0);" id="view-pdf-link_1" class="view-pdf-link">Wholeseller 1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" id="view-pdf-link_2" class="view-pdf-link">Wholeseller 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" id="view-pdf-link_3" class="view-pdf-link">Wholeseller 3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" id="view-pdf-link_4" class="view-pdf-link">Wholeseller 4</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="table-values">
+                                            <h3>Shipment Details:</h3>
+                                            <div class="table-cntr">
+                                                <table>
+                                                    <tr>
+                                                        <td>Shipment ID:</td>
+                                                        <td>123456789</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Purchase Order No.:</td>
+                                                        <td>123456789</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Threshold Temperature:</td>
+                                                        <td>34 C</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Content Discription:</td>
+                                                        <td>tuudoiadopad nfjlajflkjasfb afhlan</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Content Date:</td>
+                                                        <td>12/05/2017</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wholeseller:</td>
+                                                        <td>R.s. Interprises</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Freight Company:</td>
+                                                        <td>B.s. Transporter</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Content Value in USD:</td>
+                                                        <td>123456789</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Insurance Document:</td>
+                                                        <td><a href="#">jkahfjksf hfjklsjflsf kljKLDj</a></td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td>Freight Document:</td>
+                                                        <td><a href="#">jkahfjksf hfjklsjflsf kljKLDj</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                               </div>
+                               <div class="tabBx overview" id="notification-tab">
+                                  <div class="content">
+                                    <div class="notification-tab-content padding-t-25">
+                                        <h3>Notification:</h3>
+                                        <div class="table-cntr notificationtable">
+                                                <table>
+                                                    <thead>
+                                                    <tr>
+                                                        <th width="15%">Block Number:</th>
+                                                        <th width="15%">Temprature:</th>
+                                                        <th width="15%">TimeStamp:</th>
+                                                        <th width="55%">Transaction Hash:</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                    </div>                                      
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">Copyright, © 2017 - 2018 Company Name </div>
+        </footer>
+    </div>
+  </body>
+</template>
